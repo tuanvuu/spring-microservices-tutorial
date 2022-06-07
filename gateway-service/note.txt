@@ -1,0 +1,8 @@
+Spring có các lớp filter cho phép thực thi trong life-cycle của một request.
+Để khởi động và sử dụng các filter này, chúng ta cần extend chúng.
+Ở chế độ mặc định thì spring sẽ định nghĩa riêng cho mỗi filter lúc nào thì nên sử dụng.
+ Tuy nhiên thì bạn có thể sửa lại thứ tự một filter sẽ hoạt động trước hoặc sau filter nào.
+
+Công việc tiếp theo là chúng ta cần triển khai một filter dùng để xác nhận token.
+Filter OncePerRequestFilter là một filter được kích hoạt
+cho mỗi một lần request đến nên chúng ta sẽ dùng nó để tạo một filter của chúng ta:
